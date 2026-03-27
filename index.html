@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Você ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- INÍCIO -->
+    <div id="inicio">
+        <h1>Oi, meu amor ❤️</h1>
+        <p>Antes de tudo… eu preciso te dizer uma coisa.</p>
+        <button onclick="proxima('msg1')">Continuar 💌</button>
+    </div>
+
+    <!-- MSG 1 -->
+    <div id="msg1" class="hidden fade">
+        <p>
+            Você apareceu na minha vida de um jeito inesperado…  
+            mas ficou de um jeito que eu nunca mais quero perder.
+        </p>
+        <button onclick="proxima('msg2')">Continuar</button>
+    </div>
+
+    <!-- MSG 2 -->
+    <div id="msg2" class="hidden fade">
+        <p>
+            Com você, até os dias mais simples ficam especiais…  
+            e os momentos mais difíceis ficam mais leves.
+        </p>
+        <button onclick="proxima('msg3')">Continuar</button>
+    </div>
+
+    <!-- MSG 3 -->
+    <div id="msg3" class="hidden fade">
+        <p>
+            Eu não prometo ser perfeito…  
+            mas prometo cuidar de você, te respeitar  
+            e estar do seu lado em cada fase da vida.
+        </p>
+        <button onclick="proxima('pedido')">Só mais uma coisa...</button>
+    </div>
+
+    <!-- PEDIDO -->
+    <div id="pedido" class="hidden fade">
+        <h2>Quer namorar comigo? 💍</h2>
+
+        <button class="sim" onclick="sim()">SIM 💖</button>
+        <button class="nao" id="nao" ontouchstart="fugir()" onmouseover="fugir()">NÃO 😢</button>
+
+        <p id="resposta" class="hidden resposta-final"></p>
+    </div>
+
+</div>
+
+<script>
+function proxima(id) {
+    document.querySelectorAll(".container > div").forEach(div => div.classList.add("hidden"));
+    const el = document.getElementById(id);
+    el.classList.remove("hidden");
+}
+
+function sim() {
+    const resposta = document.getElementById("resposta");
+    resposta.innerHTML = "Você fez o meu mundo mais bonito. Eu te amo ❤️";
+    resposta.classList.remove("hidden");
+}
+
+function fugir() {
+    const botao = document.getElementById("nao");
+    botao.style.position = "absolute";
+    botao.style.top = Math.random() * 80 + "%";
+    botao.style.left = Math.random() * 80 + "%";
+}
+</script>
+
+</body>
+</html>

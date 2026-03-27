@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffb7b9, #ce8cb9);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.sim {
+    background-color: white;
+    color: #ff4d88;
+    font-weight: bold;
+}
+
+.nao {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ANIMAÇÃO SUAVE */
+.fade {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MENSAGEM FINAL */
+.resposta-final {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
